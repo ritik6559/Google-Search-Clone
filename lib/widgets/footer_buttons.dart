@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class LanguageText extends StatelessWidget {
+class FooterButton extends StatelessWidget {
   final String title;
-  const LanguageText({
+  const FooterButton({
     super.key,
     required this.title,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
+    return TextButton(
+      onPressed: () {},
       child: Text(
         title,
-        style: const TextStyle(color: Colors.blue),
+        style: const TextStyle(color: Color(0xff70757a)),
       ),
     );
   }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:googleclone/screens/home_screen.dart';
-import 'package:googleclone/screens/screen_types/mobile_screen_layout.dart';
-import 'package:googleclone/screens/screen_types/web_screen_layout.dart';
+import 'package:googleclone/screens/home_screen/home_screen.dart';
+import 'package:googleclone/screens/home_screen/screen_types/mobile_screen_layout.dart';
+import 'package:googleclone/screens/home_screen/screen_types/web_screen_layout.dart';
+import 'package:googleclone/screens/search/search_screen.dart';
 import 'package:googleclone/utils/colors.dart';
 
 void main() {
@@ -20,9 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: backgroundColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(
-        mobileScreenLayout: MobileScreenLayout(), 
-        webScreenLayout: WebScreenLayout()),
+      home: const SearchScreen(),
     );
   }
 }

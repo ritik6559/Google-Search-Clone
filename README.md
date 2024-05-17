@@ -1,16 +1,9 @@
-# googleclone
+# Google Clone<br>
+**Google Clone** is a Flutter application built with Dart that replicates the functionality of the Google search engine. It uses the Google Search API to fetch search results and display them in a user-friendly interface.<br>
 
-A new Flutter project.
+# Features<br>
+**Search Functionality:** Type in a query and get search results from the Google Search API.<br>
+**Result Display:** View search results in a clean and organized manner.<br>
+**Responsive Design:** Optimized for both web and mobile devices with responsive design.<br>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googleclone/services/api_services.dart';
 import 'package:googleclone/utils/colors.dart';
 import 'package:googleclone/widgets/search_footer.dart';
 import 'package:googleclone/widgets/search_header.dart';
@@ -26,6 +27,27 @@ class SearchScreen extends StatelessWidget {
               height: 0,
             ),
             //search results.
+            FutureBuilder(
+              future: ApiServie().fetchData(query: 'Youtube', start: '0'),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                if (snapshot.hasData) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(left: 150, top: 12),
+                        child: Text(
+                            'About ${snapshot.data?['searchInformation']['formattedTotalResults']} results in ${snapshot.data?['searchInformation']['formattedSearchTime']} seconds'),
+                      )
+                    ],
+                  );
+                }
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              },
+            ),
             //pagination buttons.
             SizedBox(
               width: double.infinity,

@@ -4,10 +4,12 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ApiServie {
-  bool isDummyData = false;
+  bool isDummyData = true;
 
   Future<Map<String, dynamic>> fetchData(
-      {required String query, String start = "0"}) async {
+      {
+        required String query, 
+        String start = "0"}) async {
     try {
       if (!isDummyData) {
         String q = query.contains(' ') ? query.split(' ').join('%20') : query;
